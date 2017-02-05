@@ -32,7 +32,7 @@ var optionEl = document.querySelectorAll('.option')
 // console.log(optionEl);
 
 forEach( optionEl , function( domEl, index, theArray ){
-  domEl.addEventListener('click', function(event){
+  domEl.addEventListener('click', function(){
     // console.log('event heard')
 
     if( domEl.className === 'option' ){
@@ -74,6 +74,7 @@ forEach( pointButtonEl , function( domEl, index, theArray ){
 // TASK 4 -- Add Guest to List
 
 var liEl = document.querySelectorAll('li')
+// console.log(liEl);
 
 forEach( liEl , function( domEl, index, theArray ){
 
@@ -81,18 +82,22 @@ forEach( liEl , function( domEl, index, theArray ){
     // console.log('event heard');
 
     var goodStandingList = document.querySelector('.good-standing-list')
-    console.log(goodStandingList);
+    // console.log(goodStandingList);
     var probationList = document.querySelector('.probation-list')
-    console.log(probationList);
+    // console.log(probationList);
 
-    // if liEl is child of goodStandingList, then append to probationList, and vise-versa
+    // if liEl parent = child of goodStandingList, then append to probationList, and vise-versa
 
+    // how do i select only the li of goodStandingList and only the li of probationList? seems to be selecting ALL li, regardless of the parent class and appending to probationList.
 
-    // if (liEl is child of goodStandingList) {
-    //
-    // } else {
-    //
-    // }
+    if (liEl.parentNode = goodStandingList) {
+      probationList.appendChild(domEl)
+    }
+
+    else {
+      // (liEl.parentNode = probationList) {
+      goodStandingList.appendChild(domEl)
+    }
 
   })
 })
