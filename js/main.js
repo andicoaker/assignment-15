@@ -35,42 +35,16 @@ forEach( optionEl , function( domEl, index, theArray ){
   domEl.addEventListener('click', function(event){
     // console.log('event heard')
 
-    // var eventDomEl = event.target
-    // var currentTargetDomEl = event.currentTarget
-
-    //+ Modify the class name of an element, with a css class that will provide a different style
-      // var titleEl = document.querySelector('.stats-column__title')
-      // titleEl.className += ' so-hot'
-
     if( domEl.className === 'option' ){
       // apply class styles for '.option.selected'
-      domEl.className = 'selected'
+      domEl.className = 'option selected'
     }
-
-    if( domEl.className === 'selected' ){
-      // apply class styles for '.option.selected'
+    else {
+      // apply class styles for '.option'
       domEl.className = 'option'
     }
-
   })
 })
-
-    //
-    // var optionElStyles = window.getComputedStyle(optionEl)
-    //   // console.log(optionElStyles);
-
-    // var optionElSelected = document.querySelector('.option.selected')
-    //   // console.log(optionElSelected);
-    //
-
-    // var optionElsSelectedStyles = window.getComputedStyle(optionElsSelected)
-    // console.log(optionElsSelectedStyles);
-
-    // var optionElsSelectedColor =
-    // optionElsSelectedStyles.color
-    // // console.log(optionElsSelectedColor);
-    // var optionElsSelectedBGColor = optionElsSelectedStyles.backgroundColor
-    // // console.log(optionElsSelectedBGColor);
 
 
 
@@ -82,7 +56,6 @@ var pointButtonEl = document.querySelectorAll('.point')
 forEach( pointButtonEl , function( domEl, index, theArray ){
 
     // if '.point' button is clicked, then add '.point' button value to h4 '.total-points' (start value of 10)
-    // do i need to use parseInt here to change the value to an integer?
 
   domEl.addEventListener('click',function(){
     // console.log('event heard');
@@ -90,12 +63,11 @@ forEach( pointButtonEl , function( domEl, index, theArray ){
     // console.log(totalPointsEl);
 
     var newPointValue = pointButtonEl + totalPointsEl
+    // do i need to use parseInt here to change the value to an integer?
 
   })
 })
 
-// var totalPointsElStyles = window.getComputedStyle(totalPointsEl)
-// console.log(totalPointsElStyles);
 
 
 
