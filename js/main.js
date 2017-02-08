@@ -51,24 +51,29 @@ forEach( optionEl , function( domEl, index, theArray ){
 
 // TASK 3 -- Move Item From List to List
 
-var pointButtonEl = document.querySelectorAll('.point')
-
-forEach( pointButtonEl , function( domEl, index, theArray ){
-
     // if '.point' button is clicked, then add '.point' button value to h4 '.total-points' (start value of 10)
 
+var pointButtonEl = document.querySelectorAll('.point')
+  // console.log(pointButtonEl);
+var totalPointsEl = document.querySelector('.total-points')
+  // console.log(totalPointsEl);
+var totalPointsElValue = totalPointsEl.textContent;
+// console.log(totalPointsElValue);
+
+forEach( pointButtonEl , function( domEl, index, theArray ){
   domEl.addEventListener('click',function(){
     // console.log('event heard');
-    var totalPointsEl = document.querySelector('.total-points')
-    // console.log(totalPointsEl);
-
-    var newPointValue = pointButtonEl + totalPointsEl
     // do i need to use parseInt here to change the value to an integer?
+
+    var domElValue = domEl.textContent;
+      // console.log(domElValue);
+
+    totalPointsElValue = parseInt(domElValue) + parseInt(totalPointsElValue);
+
+    totalPointsEl.textContent = totalPointsElValue
 
   })
 })
-
-
 
 
 // TASK 4 -- Add Guest to List
